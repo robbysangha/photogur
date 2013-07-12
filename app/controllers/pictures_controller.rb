@@ -39,4 +39,13 @@ class PicturesController < ApplicationController
   	]
   	@picture = @picture[params[:id].to_i]
 	end
+
+	def new
+		render :text => "Saving a picture. URL: #{params[:url]}, Title: #{params[:title]}, Artist: #{params[:artist]}"
+	end
+
+	def create
+		
+	end
+
 end

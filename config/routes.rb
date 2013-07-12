@@ -54,8 +54,11 @@ Photogur::Application.routes.draw do
   #     resources :products
   #   end
 
-  get "pictures" => "pictures#index"
+  get "pictures" => "pictures#index" # Displays all the pictures in Database
 
-  get "pictures/:id" => "pictures#show", as: "picture"
+  get "pictures/:id" => "pictures#show", as: "picture" # Displays the picture user requested
+
+  post "picture" => "picture#create" # Creates and saves an instance of model - 'pictures'
+  get "pictures/new" => "picture#new" # Creates an empty instance of model - 'pictures'
 
 end
