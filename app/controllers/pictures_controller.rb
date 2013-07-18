@@ -37,7 +37,7 @@ class PicturesController < ApplicationController
       :url    => "http://monicao.s3.amazonaws.com/bitmaker/girl.jpg"
   		}
   	]
-  	@picture = @picture[params[:id].to_i]
+  	@picture = @pictures[(params[:id]).to_i]
 	end
 
 	def new
@@ -53,6 +53,6 @@ class PicturesController < ApplicationController
     else
       # otherwise render the view associated with the action :new (i.e. new.html.erb)
       render :new
-    send
+    end
 	end
 end
