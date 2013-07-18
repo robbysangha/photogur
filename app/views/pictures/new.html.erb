@@ -1,18 +1,18 @@
 <h1>Add a picture</h1>
-<%= form_for "/pictures" do  |f|%>
+<%= form_for @pictures do  |f|%>
   <p>
-    <%= f.label_tag "artist" %><br>
-    <%= f.text_field_tag "artist" %>
+    <%= f.label "artist" %><br>
+    <%= f.text_field "artist" %>
   </p>
   <p>
-    <%= f.label_tag "title" %><br>
-    <%= f.text_field_tag "title" %>
+    <%= f.label"title" %><br>
+    <%= f.text_field "title" %>
   </p>
   <p>
-    <%= f.label_tag "url" %><br>
-    <%= f.text_field_tag "url" %>
+    <%= f.label "url" %><br>
+    <%= f.text_field "url" %>
   </p>
   <p>
-    <%= f.submit_tag "Save" %>
+    <%= f.submit "Save" %>
   </p>
 <% end %>
