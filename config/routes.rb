@@ -4,12 +4,15 @@ Photogur::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
 
-  get "pictures" => "pictures#index" # Displays all the pictures in Database
-  root "pictures#index"
+  # get "pictures" => "pictures#index" # Displays all the pictures in Database
+  # root "pictures#index"
 
-  get "pictures/:id" => "pictures#show", as: "picture" # Displays the picture user requested
+  # get "pictures/:id" => "pictures#show", as: "picture" # Displays the picture user requested
 
-  post "picture" => "picture#create" # Creates and saves an instance of model - 'pictures'
-  get "pictures/new" => "picture#new" # Creates an empty instance of model - 'pictures'
+  # post "picture" => "picture#create" # Creates and saves an instance of model - 'pictures'
+  # get "pictures/new" => "picture#new" # Creates an empty instance of model - 'pictures'
+
+  resources :pictures
+  root :to => "pictures#index"
 
 end
